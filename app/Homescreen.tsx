@@ -25,6 +25,8 @@ const Homescreen: React.FC<SplashScreenProps> = ({ navigation }) => {
             <Text style={styles.featureText}>{text}</Text>
           </TouchableOpacity>
         ))}
+             
+
       </View>
       <Text style={styles.subtitle}>Let's Talk Tech</Text>
       <TouchableOpacity 
@@ -43,6 +45,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    gap:46,
     justifyContent: 'center',
     backgroundColor: '#FFFFFF',
   },
@@ -73,22 +76,24 @@ const styles = StyleSheet.create({
     textAlign:"left",
     fontWeight: 'bold',
     marginTop:0,
-    color:"#109ACD",
+    color:"#6241d8",
   },
   subtitle: {
     fontSize: 24,
     marginBottom: 20,
     textAlign:"left",
 
-    marginTop:40,
+    // marginTop:40,
     fontWeight: 'bold',
 
-    color:"#109ACD",
+    color:"#6241d8",
   },
   buttonContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    textAlign:"center",
+    marginLeft:" 5%",
+    justifyContent: 'flex-start',
   },
   featureButton: {
     backgroundColor: 'transparent',
@@ -96,14 +101,14 @@ const styles = StyleSheet.create({
     margin: 5,
     width:"25%",
   borderWidth:1,
-  borderColor:"#109ACD",
+  borderColor:"#6241d8",
     borderRadius: 5,
   },
   featureText: {
     fontSize: 14,
   },
   startButton: {
-    backgroundColor: '#109ACD',
+    backgroundColor: '#6241d8',
     padding: 5,
     borderRadius: 50,
     marginTop: 10,
@@ -115,7 +120,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 12,
-    color: '#109ACD',
+    color: '#6241d8',
     marginTop: 20,
   },
 });

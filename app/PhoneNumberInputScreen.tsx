@@ -11,12 +11,12 @@ export default function ConnectScreen({navigation}) {
         <Text style={styles.headerText}>Let's Connect</Text>
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Phone Number</Text>
+        {/* <Text style={styles.inputLabel}>Phone Number</Text> */}
         <TextInput
           style={styles.input}
           onChangeText={setPhoneNumber}
           value={phoneNumber}
-          placeholder="Enter your phone number"
+          placeholder="Phone Number"
           keyboardType="phone-pad"
         />
         <Text style={styles.inputDescription}>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    backgroundColor: '#0000ff',
+    backgroundColor: '109ACD',
     padding: 15,
     borderRadius: 15,
     marginTop:380,
