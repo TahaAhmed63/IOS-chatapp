@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: "auto",
   },
   logoPlaceholder: {
     width: 200,
@@ -72,18 +72,18 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     textAlign:"left",
     fontWeight: 'bold',
-    marginTop:40,
-    color:"#266982",
+    marginTop:0,
+    color:"#109ACD",
   },
   subtitle: {
     fontSize: 24,
-    marginBottom: 40,
+    marginBottom: 20,
     textAlign:"left",
 
     marginTop:40,
     fontWeight: 'bold',
 
-    color:"#266982",
+    color:"#109ACD",
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -94,18 +94,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     padding: 10,
     margin: 5,
+    width:"25%",
   borderWidth:1,
-  borderColor:"#266982",
+  borderColor:"#109ACD",
     borderRadius: 5,
   },
   featureText: {
     fontSize: 14,
   },
   startButton: {
-    backgroundColor: '#266982',
-    padding: 15,
+    backgroundColor: '#109ACD',
+    padding: 5,
     borderRadius: 50,
-    marginTop: 40,
+    marginTop: 10,
   },
   startButtonText: {
     color: '#FFFFFF',
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 12,
-    color: '#808080',
+    color: '#109ACD',
     marginTop: 20,
   },
 });

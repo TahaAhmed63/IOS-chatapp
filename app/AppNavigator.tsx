@@ -15,9 +15,9 @@ const AppNavigator: React.FC = () => {
   <Stack.Navigator  screenOptions={{
     headerShown: false
   }} initialRouteName="Homescreen">
-  <Stack.Screen name="Homescreen" component={Homescreen} />
-  <Stack.Screen name="PhoneNumber" component={PhoneNumberinputScreen} />
-  <Stack.Screen name="chatlist" component={ChatListScreen} />
+  <Stack.Screen options={{headerShown: false}} name="Homescreen" component={Homescreen} />
+  <Stack.Screen options={{headerShown: false}} name="PhoneNumber" component={PhoneNumberinputScreen} />
+  <Stack.Screen options={{headerShown: false}} name="chatlist" component={ChatListScreen} />
 
 
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
+// import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-export default function ConnectScreen() {
+export default function ConnectScreen({navigation}) {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   return (
@@ -22,8 +23,8 @@ export default function ConnectScreen() {
           We will share you SMS with confirmation code.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Continue</Text>
+      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('PhoneNumber')}>
+        <Text style={styles.buttonText} >Continue</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
