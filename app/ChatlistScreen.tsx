@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, FlatList, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; // Import icons for sidebar
+import { StyleSheet, View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
 
 interface ChatItem {
   id: string;
@@ -28,39 +27,18 @@ export default function ChatListScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Sidebar Menu */}
-      <View style={styles.sidebar}>
-        <TouchableOpacity style={styles.sidebarIcon}>
-          <Ionicons name="ios-chatbubbles-outline" size={24} color="#fff" />
-          <Text style={styles.sidebarText}>CHATS</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.sidebarIcon}>
-          <Ionicons name="ios-people-outline" size={24} color="#fff" />
-          <Text style={styles.sidebarText}>STATUS</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.sidebarIcon}>
-          <Ionicons name="ios-camera-outline" size={24} color="#fff" />
-          <Text style={styles.sidebarText}>CAMERA</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.settingsIcon}>
-          <Ionicons name="ios-settings-outline" size={24} color="#fff" />
-        </TouchableOpacity>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Let's Talk Tech</Text>
+        <Text style={styles.headerSubtitle}>never ending chats...</Text>
       </View>
-
-      <View style={styles.chatListContainer}>
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}>Let's Talk Tech</Text>
-          <Text style={styles.headerSubtitle}>never ending chats...</Text>
-        </View>
-        <FlatList
-          data={DATA}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
-        <TouchableOpacity style={styles.fab}>
-          <Text style={styles.fabIcon}>+</Text>
-        </TouchableOpacity>
-      </View>
+      <FlatList
+        data={DATA}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      />
+      <TouchableOpacity style={styles.fab}>
+        <Text style={styles.fabIcon}>+</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -68,45 +46,21 @@ export default function ChatListScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    backgroundColor: '#131C21',
-  },
-  sidebar: {
-    width: 70,
-    backgroundColor: '#1A73E8',
-    alignItems: 'center',
-    paddingVertical: 20,
-  },
-  sidebarIcon: {
-    marginBottom: 40,
-    alignItems: 'center',
-  },
-  sidebarText: {
-    fontSize: 10,
-    color: '#fff',
-    marginTop: 5,
-  },
-  settingsIcon: {
-    position: 'absolute',
-    top: 10,
-    alignItems: 'center',
-  },
-  chatListContainer: {
-    flex: 1,
-    backgroundColor: '#131C21',
+    backgroundColor: '#fff',
   },
   header: {
     padding: 20,
-    backgroundColor: '#075E54',
+    backgroundColor: '#fff',
     alignItems: 'center',
   },
   headerTitle: {
-    color: '#fff',
+    color: '#27326b',
     fontSize: 24,
+    zIndex:-1,
     fontWeight: 'bold',
   },
   headerSubtitle: {
-    color: '#fff',
+    color: '#27326b',
     fontSize: 16,
   },
   avatar: {
@@ -123,12 +77,18 @@ const styles = StyleSheet.create({
     borderBottomColor: '#333',
     alignItems: 'center',
   },
+  profileIcon: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 10,
+  },
   itemTextContainer: {
     flex: 1,
   },
   name: {
     fontSize: 18,
-    color: '#fff',
+    color: '#000',
   },
   message: {
     fontSize: 16,
@@ -153,5 +113,5 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: '#fff',
     fontWeight: 'bold',
-  },
+  },
 });

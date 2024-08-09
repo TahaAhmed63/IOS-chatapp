@@ -23,8 +23,9 @@ export default function ConnectScreen({navigation}) {
           We will share you SMS with confirmation code.
         </Text>
       </View>
-      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('PhoneNumber')}>
-        <Text style={styles.buttonText} >Continue</Text>
+      <TouchableOpacity style={styles.button}    onPress={() => navigation.navigate('chatlist')}>
+        <Text style={styles.buttonText}       
+        >Continue</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -37,6 +38,9 @@ const styles = StyleSheet.create({
     maxWidth:"100%",
     margin:0,
    
+display:"flex",
+justifyContent:"center",
+
 
     paddingHorizontal: 20,
   },
@@ -69,16 +73,18 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    backgroundColor: '109ACD',
-    padding: 15,
-    borderRadius: 15,
-    marginTop:380,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#3f51b5',
+    padding: 5,
+    width:"80%",
+    // marginTop:"70%",
+    borderRadius: 50,
+    textAlign:"center",
+    marginTop: "80%",
   },
   buttonText: {
-    fontSize: 20,
-    color: '#fff',
+    color: '#FFFFFF',
     fontWeight: 'bold',
+    textAlign:"center",
+    fontSize: 16,
   },
 });
